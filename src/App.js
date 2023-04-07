@@ -57,23 +57,37 @@ function ProductTable({ products }) {
 
 function SearchBar() {
   return (
-    <form>
-      <input type="text" placeholder="Search..." />
-      <label>
-        <input type="checkbox" />
-        {' '}
-        Only show products in stock
-      </label>
-    </form>
+    <td>
+      <table>
+        <tr>
+         <input type="text" placeholder="Search..." />
+        </tr>
+        <tr>
+        <label>
+         <input type="checkbox" />
+         {' '}
+         Only show products in stock
+         </label>
+        </tr>
+      </table>
+    </td>
   );
 }
 
 function FilterableProductTable({ products }) {
   return (
-    <div>
+    <table>
+      <tr>
       <SearchBar />
+      </tr>
+      <tr>
       <ProductTable products={products} />
-    </div>
+      </tr>
+    </table>
+    // <div>
+    //   <SearchBar />
+    //   <ProductTable products={products} />
+    // </div>
   );
 }
 
